@@ -1,0 +1,21 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "description": "test hello",
+  "main": "index.js",
+  "author": "insu lee",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --out=dist --asar --overwrite --all --ignore=dist",
+    "build:darwin": "electron-packager . --out=dist --asar --overwrite --platform=darwin --arch=x64 --ignore=dist",
+    "compress": "cd dist; for file in `ls`; do zip -r -y $file.zip $file; done"
+  },
+  "dependencies": {
+    "electron": "^3.0.4"
+  },
+  "devDependencies": {
+    "electron": "^3.0.4",
+    "electron-packager": "^12.2.0"
+  }
+}
